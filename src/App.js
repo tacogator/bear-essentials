@@ -18,7 +18,13 @@ function App() {
   );
 }
 
-const BrandingLogo = <img src={Logo} />;
-const BrandingText = <img src={LogText} style={{ paddingLeft: "8px" }} />;
+const BrandingLogo = <img alt="Bear logo" src={Logo} />;
+const BrandingText = (
+  <img
+    alt="BearEssentials logo text"
+    src={LogText}
+    style={{ paddingLeft: "8px" }}
+  />
+);
 
 export default App;
