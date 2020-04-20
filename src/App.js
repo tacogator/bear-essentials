@@ -3,7 +3,7 @@ import "./App.css";
 import Logo from "./logo-48.png";
 import LogText from "./logo-text.png";
 import BearAppBar from "./components/bear/BearAppBar";
-import {desktopMenu, mobileMenu} from "./components/MyMenus"
+import { desktopMenu, mobileMenu } from "./components/MyMenus";
 
 function App() {
   return (
@@ -19,6 +19,6 @@ function App() {
 }
 
 const BrandingLogo = <img src={Logo} />;
-const BrandingText = <img src={LogText} />;
+const BrandingText = <img src={LogText} style={{ paddingLeft: "8px" }} />;
 
 export default App;
