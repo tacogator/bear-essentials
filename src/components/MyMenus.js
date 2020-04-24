@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, MenuItem, Divider } from "@material-ui/core";
-
+import {Menu as Hamburger} from "@material-ui/icons"
 import BearMenuList from "./bear/BearMenuList";
 
 export const desktopMenu = (
@@ -17,7 +17,7 @@ export const desktopMenu = (
 );
 
 const mobileHamburger = (
-  <BearMenuList label="[=]">
+  <BearMenuList label={<Hamburger/>}>
     <MenuItem href="/login">Login</MenuItem>
     <Divider />
     <MenuItem href="/services">Services</MenuItem>
