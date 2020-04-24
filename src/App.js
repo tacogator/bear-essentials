@@ -1,10 +1,12 @@
 import React from "react";
-import { Container, Box } from "@material-ui/core";
-import Logo from "./logo-48.png";
+import { Container } from "@material-ui/core";
+import Logo from "./logo.png";
+import LogoText from "./logo-text.png";
 import BearAppBar from "./components/bear/BearAppBar";
 import { desktopMenu, mobileMenu } from "./components/MyMenus";
 import DialogDemo from "./components/DialogDemo";
-function App() {
+
+export default function () {
   return (
     <div>
       <BearAppBar
@@ -22,9 +24,9 @@ function App() {
 
 const BrandingLogo = <img alt="Bear logo" src={Logo} />;
 const BrandingText = (
-  <Box paddingLeft="8px" fontWeight="700" color="primary.main">
-    BearEssentials
-  </Box>
+  <img
+    alt="BearEssentials logo text"
+    src={LogoText}
+    style={{ paddingLeft: "8px" }}
+  />
 );
-
-export default App;
