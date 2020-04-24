@@ -1,19 +1,23 @@
 import React from "react";
-import "./App.css";
-import Logo from "./logo-48.png";
-import LogText from "./logo-text.png";
+import { Container } from "@material-ui/core";
+import Logo from "./logo.png";
+import LogoText from "./logo-text.png";
 import BearAppBar from "./components/bear/BearAppBar";
 import { desktopMenu, mobileMenu } from "./components/MyMenus";
+import DialogDemo from "./components/DialogDemo";
 
-function App() {
+export default function () {
   return (
-    <div className="App">
+    <div>
       <BearAppBar
         brandingLogo={BrandingLogo}
         brandingText={BrandingText}
         desktopMenu={desktopMenu}
         mobileMenu={mobileMenu}
       />
+      <Container maxWidth="md" style={{ paddingTop: "4rem" }}>
+        <DialogDemo />
+      </Container>
     </div>
   );
 }
@@ -22,9 +26,7 @@ const BrandingLogo = <img alt="Bear logo" src={Logo} />;
 const BrandingText = (
   <img
     alt="BearEssentials logo text"
-    src={LogText}
+    src={LogoText}
     style={{ paddingLeft: "8px" }}
   />
 );
-
-export default App;

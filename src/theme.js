@@ -1,12 +1,26 @@
 import { createMuiTheme } from "@material-ui/core";
 require("typeface-cooper-hewitt");
 
+const breakpointValues = {
+  xs: 0,
+  sm: 600,
+  md: 810,
+  lg: 1280,
+  xl: 1020,
+};
+
 // A custom theme for this app
 const theme = createMuiTheme({
   props: {
     MuiButtonBase: {
       disableRipple: true,
     },
+    MuiButton: {
+      disableElevation: true
+    }
+  },
+  shape: {
+    borderRadius: 8,
   },
   typography: {
     fontFamily: [
@@ -18,19 +32,20 @@ const theme = createMuiTheme({
     ],
     button: {
       textTransform: "none",
-      fontSize: "1.125em",
+      fontSize: "1rem",
+      boxShadow: "none",
     },
     h2: {
       fontSize: "2rem",
       fontWeight: "700",
-      fontFamily: "Lato,Helvetica neue,helvetica,sans-serif",
+      fontFamily: "Cooper Hewitt,Helvetica neue,helvetica,sans-serif",
       lineHeight: "2rem",
       letterSpacing: "-0.05rem",
     },
     h6: {
       fontSize: "1.45rem",
       fontWeight: "400",
-      fontFamily: "Lato,Helvetica neue,helvetica,sans-serif",
+      fontFamily: "Cooper Hewitt,Helvetica neue,helvetica,sans-serif",
       lineHeight: "2rem",
       "& a": {
         color: "inherit",
@@ -44,7 +59,7 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: `#df1317`,
+      main: `#ef5350`,
     },
     secondary: {
       main: `#607d8b`,
@@ -57,9 +72,35 @@ const theme = createMuiTheme({
       main: "#00897b",
     },
     background: {
-      default: `rgba(224, 224, 224 , 0.95)`,
-      dark: "#546e7a"
+      default: `rgba(253, 254, 254 , 0.95)`,
+    },
+  },
+  breakpoints: { values: breakpointValues },
+  overrides: {
+    MuiButton: {
+      // root: {
+      //   borderWidth: "2px"
+      // },
+      contained: {
+        boxShadow: "none",
+      },
+      outlined: {
+        borderWidth: "2px",
+      },
+      outlinedPrimary: {
+        borderWidth: "2px",
+      },
+      outlinedSecondary: {
+        borderWidth: "2px",
+      }
+    },
+
+    MuiAppBar: {
+      root: {
+        boxShadow: "none",
+      },
     },
   },
 });
+
 export default theme;

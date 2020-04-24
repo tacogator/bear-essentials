@@ -4,9 +4,7 @@ import {
   Grow,
   Paper,
   Popper,
-  MenuItem,
   MenuList,
-  Divider,
   ClickAwayListener,
   makeStyles,
 } from "@material-ui/core";

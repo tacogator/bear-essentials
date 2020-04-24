@@ -15,9 +15,9 @@ const MinAppBar = withStyles((theme) => ({
     minHeight: "64px",
     color: theme.palette.text.primary,
     backgroundColor: theme.palette.background.default,
-    boxShadow: "none",
-    borderTop: "3px solid #CDDC39",
-    borderBottom: "1px solid #bdbdbd",
+    // boxShadow: "none",
+    borderTop: `1px solid  #607D8B`,
+    borderBottom: "1px solid #CFD8DC",
   },
 }))(AppBar);
 
@@ -34,10 +34,11 @@ export default function BearAppBar({
   brandingText,
   desktopMenu,
   mobileMenu,
+  ...rest
 }) {
   const classes = useStyles();
   return (
-    <MinAppBar>
+    <MinAppBar {...rest}>
       <Container
         maxWidth="lg"
         style={{
