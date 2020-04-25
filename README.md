@@ -1,12 +1,14 @@
-## Bear Essentails
+# Bear Essentails
 
-Cut-n-paste ready Material-UI components for your SaaS.
+Cut-n-paste-ready Material-UI components for your SaaS.
 
+Available components
+- [BearAppBar](/src/components/bear/BearAppBar.js)
+- [Dialog](/src/components/bear/BearDialog.js)
 
+## Responsive navbar
 
-### Responsive navbar
-
-MUI doesn't comes with a responsive navbar out of the box.  Fortunately, you can easily build one yourself from `AppBar` and `Hidden`.
+MUI doesn't have a responsive navbar out of the box.  Fortunately, you can easily build one yourself from `AppBar` and `Hidden`.
 
 ```
 <BearAppBar
@@ -16,6 +18,8 @@ MUI doesn't comes with a responsive navbar out of the box.  Fortunately, you can
     mobileMenu={mobileMenu}
 />
 ```
+[View source](/src/components/bear/BearAppBar.js)
+
 
 #### Desktop
 
@@ -27,7 +31,9 @@ MUI doesn't comes with a responsive navbar out of the box.  Fortunately, you can
 
 ---
 
-### Dialog
+## Dialog
+
+If you app calls for more more than one dialog, consider building a wrapper like we do here to abstract away unnecessary MUI details.
 
 ```
     const [open, setOpen] = useState(false);
@@ -42,5 +48,6 @@ MUI doesn't comes with a responsive navbar out of the box.  Fortunately, you can
         </BearDialog>);
 
 ```
+[View source](/src/components/bear/BearDialog.js)
 
 ![Bear essentials dialog](./dialog.png)
