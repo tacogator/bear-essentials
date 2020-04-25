@@ -1,10 +1,14 @@
-# Bear Essentails
+# Bear Essentials
 
 Cut-n-paste-ready Material-UI components for your SaaS.
+
+![Bear essentials logo](/src/logo.png) 
 
 Available components
 - [BearAppBar](/src/components/bear/BearAppBar.js)
 - [Dialog](/src/components/bear/BearDialog.js)
+
+Live demo on [codesandbox](https://codesandbox.io/s/material-ui-bear-essentials-8w5z4)
 
 ## Responsive navbar
 
@@ -51,3 +55,12 @@ If you app calls for more more than one dialog, consider building a wrapper like
 [View source](/src/components/bear/BearDialog.js)
 
 ![Bear essentials dialog](./dialog.png)
+
+---
+
+### LICENSE
+MIT
+
+### MISC
+
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
