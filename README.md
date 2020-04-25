@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bear Essentials
 
-## Available Scripts
+Cut-n-paste-ready Material-UI components for your SaaS.
 
-In the project directory, you can run:
+![Bear essentials logo](/src/logo.png) 
 
-### `yarn start`
+Available components
+- [BearAppBar](/src/components/bear/BearAppBar.js)
+- [Dialog](/src/components/bear/BearDialog.js)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Live demo on [codesandbox](https://codesandbox.io/s/material-ui-bear-essentials-8w5z4)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Responsive navbar
 
-### `yarn test`
+MUI doesn't have a responsive navbar out of the box.  Fortunately, you can easily build one yourself from `AppBar` and `Hidden`.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+<BearAppBar
+    brandingLogo={BrandingLogo}
+    brandingText={BrandingText}
+    desktopMenu={desktopMenu}
+    mobileMenu={mobileMenu}
+/>
+```
+[View source](/src/components/bear/BearAppBar.js)
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Desktop
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Bear essentials navbar desktop](./navbar-desktop.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Mobile
 
-### `yarn eject`
+![Bear essentials navbar mobile](./navbar-mobile.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dialog
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you app calls for more more than one dialog, consider building a wrapper like we do here to abstract away unnecessary MUI details.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+    const [open, setOpen] = useState(false);
 
-## Learn More
+    return (
+        <BearDialog
+            title="A simple dialog"
+            open={open}
+            setOpen={setOpen}
+        >
+            <p>They can't scare me, if I scare them first ― Lady Gaga</p>
+        </BearDialog>);
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+[View source](/src/components/bear/BearDialog.js)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Bear essentials dialog](./dialog.png)
 
-### Code Splitting
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### LICENSE
+MIT
 
-### Analyzing the Bundle Size
+### MISC
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
