@@ -1,5 +1,5 @@
 {
-  "name": "material-responsive-app-bar",
+  "name": "bear-essentials",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -34,6 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "keywords": [],
-  "description": "MUI responsive appbar - @bear-essentials"
+  "keywords": ["material-ui", "saas", "ssas boilerplate", "navbar"],
+  "license" : "MIT"
+  "description": "Essential high level material-ui components - @bear-essentials"
 }
